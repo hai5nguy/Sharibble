@@ -177,8 +177,8 @@ function processNewChatMessage(message) {
 
 function surroundWithAnchor(text, url) {
   var domain = extractDomain(url);
-  domain = domain ? domain + " " : "";
-  return text.replace(url, '<a href="' + url + '" target="_blank">' + domain + 'image</a>');
+  domain = domain ? domain.capitalizeFirstLetter() + " " : "";
+  return text.replace(url, '<a href="' + url + '" target="_blank">' + domain + 'Image</a>');
 }
 function extractDomain(url) {
   var domainNameRegEx = /(?:https?:\/\/\S+\.)(\S+)(?:\.(?:com?|org|net|mil|edu|ca))/ig;
