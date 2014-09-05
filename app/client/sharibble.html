@@ -1,0 +1,139 @@
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />    <!-- Must be first item in <Head> -->
+  <title>Sharibble! Share images and videos with internet friends! :D</title>
+  <meta charset="UTF-8"                                                                                  />
+  <meta name="description"                     content="Sharibble! A chatroom to anonymously share images and videos." />
+  <meta name="keywords"                        content="Sharable, Sharible, Sharabble, anon image chat, anonamous, anonomys anonymous, imgur chat" />
+  <meta http-equiv="Expires"                   content="0"                                               />
+  <meta name="viewport"                        content="width=device-width, initial-scale=1.0"           />
+  <meta name="subject"                         content="Chatroom for sharing images and videos"          />
+  <meta name="copyright"                       content="HaiNSoftware"                                    />
+  <meta name="language"                        content="EN"                                              />
+  <meta name="robots"                          content="index,follow"                                    />
+  <meta name="author"                          content="name, email@site.com"                            />
+  <meta name="designer"                        content="TheJaredWilcurt"                                 />
+  <meta name="reply-to"                        content="email@site.com"                                  />
+  <meta name="owner"                           content="name"                                            />
+  <meta name="rating"                          content="General"                                         />
+  <meta name="HandheldFriendly"                content="True"                                            />
+  <meta name="application-name"                content="Sharibble"                                       />
+  <meta http-equiv="cleartype"                 content="on"                                              />
+  <meta name="msapplication-navbutton-color"   content="#FFFFFF"                                         />
+  <meta name="msapplication-TileColor"         content="#FFFFFF"                                         />
+  <meta name="msapplication-square70x70logo"   content="img/meta/mstile01sm.png"                         />
+  <meta name="msapplication-square150x150logo" content="img/meta/mstile02md.png"                         />
+  <meta name="msapplication-wide310x150logo"   content="img/meta/mstile03wd.png"                         />
+  <meta name="msapplication-square310x310logo" content="img/meta/mstile04lg.png"                         />
+  <meta name="apple-mobile-web-app-title"      content="Sharibble"                                       />
+  <meta name="apple-mobile-web-app-capable"    content="yes"   /> <!-- "yes" hides Safari navbar in iOS -->
+  <meta name="apple-touch-fullscreen"          content="yes"                                             />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"                                     />
+  <link rel="apple-touch-icon"             href="img/meta/apl-57.png"   type="image/png" sizes="57x57"   />
+  <link rel="apple-touch-icon-precomposed" href="img/meta/apl-57.png"   type="image/png" sizes="57x57"   />
+  <link rel="apple-touch-icon"             href="img/meta/apl-72.png"   type="image/png" sizes="72x72"   />
+  <link rel="apple-touch-icon-precomposed" href="img/meta/apl-72.png"   type="image/png" sizes="72x72"   />
+  <link rel="apple-touch-icon"             href="img/meta/apl-114.png"  type="image/png" sizes="114x114" />
+  <link rel="apple-touch-icon-precomposed" href="img/meta/apl-114.png"  type="image/png" sizes="114x114" />
+  <link rel="apple-touch-icon"             href="img/meta/apl-144.png"  type="image/png" sizes="144x144" />
+  <link rel="apple-touch-icon-precomposed" href="img/meta/apl-144.png"  type="image/png" sizes="144x144" />
+  <link rel="apple-touch-startup-image"    href="img/meta/apl-str.png"  type="image/png"                 />
+  <link rel="fluid-icon"                   href="img/meta/fluid.png"    type="image/png"                 />
+  <link rel="icon"                         href="/favicon.ico"          type="image/x-icon" sizes="16x16 24x24 32x32" />
+  <link rel="shortcut icon"                href="/favicon.ico"          type="image/ico"                 />
+
+</head>
+
+<body>
+  <form>
+    <table id="wrapper">
+      <tbody>
+        <tr>
+          {{> image}}
+          <td id="dragbar" rowspan="3"></td>
+          <td id="infobar" colspan="2">
+            <div>
+              {{> infobar}}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="chat" colspan="2">
+            <div id="aboutModal" style="display: none;">
+              <span class="modalClose">X</span>
+              <div id="aboutModalInner">
+
+                <h1>Sharibble!</h1>
+                <p><em>Sharibble</em> is an anonymous image & video sharing chat platform.</p>
+                <p>All users are anonymous except for the colorful icon that represents them. You can re-roll for a new random icon by refreshing the page or clicking the icon at the top of the chat.</p>
+
+                <h1>Image and Video Support</h1>
+                <p><strong>Images:</strong> Please only link to image hosting websites. We support .png, .jpg, .jpeg, and .gif formats.</p>
+                <p><strong>Image Albums</strong> We are currently working on adding support for Imgur Albums</p>
+                <p><strong>Videos:</strong> We are currently working on adding YouTube and Vimeo embedding support.</p>
+
+                <h1>Privacy</h1>
+                <p>Only the last <strong>50 lines</strong> of the chat are stored in the database. This means that all older comments are permanently deleted. Sharibble cares about your privacy and anonymity. We do not keep a log of IP addresses, or of links posted here. <strong>Once it's gone, it's gone.</strong> If you want to preserve a moment in the chat, your best bet is with a screenshot.</p>
+                <p>All image icons are from TheNounProject and are public domain. If there is an icon you'd like added to the chat, let us know and we might create it and release it in to the public domain.</p>
+
+                <h1>Objectionable Content</h1>
+                <q>What do I do if someone posts something offensive?</q>
+                <p>Best thing to do is to ignore it and post a different link to replace it. Since all content here is temporary and we don't store anything other than the last 50 comments, we have no way of verifying reports. If someone links to content that is illegal, contact the administrators of the server the content is hosted on and alert them of the content.</p>
+
+                <h1>Private chats</h1>
+                <p>Private chats are a feature we are working on that would all you to create your own unique sharibble.net URL to invite friends to!</p>
+
+                <h1>Site Design</h1>
+                <p>This website is created by <a href="http://hainsoftware.com">Hai Nguyen</a> &amp; <a href="http://thejaredwilcurt.com">The Jared Wilcurt</a> using Meteor, Grunt, and Sass. This website was developed in Windows, OSX, and Linux. The idea for this website occurred on </p>
+
+              </div>
+            </div>
+            <div id="chatlog">
+              {{> chats}}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="message">
+            {{> chatinput}}
+          </td>
+          <td id="submitbutton">
+            {{> chatsubmit}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+<template name="chats">
+  {{#each chats}}
+  {{> chatmessage}}
+  {{/each}}
+</template>
+
+<template name="chatmessage">
+  <p>
+    <span class="icon {{userIconClassName}}"></span>
+    <time>{{formatTimestamp timestamp}}</time>
+    <span>{{{embedUrl message}}}</span>
+  </p>
+</template>
+
+<template name="image">
+  <td id="imagecontainer" class="tall" rowspan="3" style="background-image:url('{{url}}');"></td>
+</template>
+
+<template name="chatinput">
+  <textarea id="write"></textarea>
+</template>
+
+<template name="chatsubmit">
+  <input id="send" type="submit" value="Send" />
+</template>
+
+<template name="infobar">
+  <span id="reroll" class="icon {{currentUserIconClassName}}"></span>
+  <span id="currentlyOnline">{{usersCurrentlyOnline}} Users Online</span>
+  <span id="about">About/FAQ</span>
+</template>
