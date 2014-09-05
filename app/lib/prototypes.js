@@ -6,7 +6,6 @@ Date.prototype.addSeconds = function(s) {
 	this.setSeconds(this.getSeconds() + s);
 	return this;
 }
-String.prototype.capitalizeFirstLetter()
-{
+String.prototype.capitalizeFirstLetter = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }

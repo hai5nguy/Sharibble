@@ -181,7 +181,7 @@ function surroundWithAnchor(text, url) {
   return text.replace(url, '<a href="' + url + '" target="_blank">' + domain + 'Image</a>');
 }
 function extractDomain(url) {
-  var domainNameRegEx = /(?:https?:\/\/\S+\.)(\S+)(?:\.(?:com?|org|net|mil|edu|ca))/ig;
+  var domainNameRegEx = /(?:https?:\/\/\S+\.)(\S+)(?:\.(?:com?|org|net|mil|edu|ca|li))/ig;
   var domain = domainNameRegEx.exec(url);
   return domain ? domain[1] : null;
 }
