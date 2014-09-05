@@ -176,11 +176,14 @@ function processNewChatMessage(message) {
 }
 
 function surroundWithAnchor(text, url) {
-  //var domain = extractDomain(url);
-  return text.replace(url, "<a href='" + url + "' target='_blank'>image</a>");
+  var domain = extractDomain(url);
+  domain = domain ? domain + " " : "";
+  return text.replace(url, '<a href="' + url + '" target="_blank">' + domain + 'image</a>');
 }
 function extractDomain(url) {
-
+  var domainNameRegEx = /(?:https?:\/\/\S+\.)(\S+)(?:\.(?:com?|org|net|mil|edu|ca))/ig;
+  var domain = domainNameRegEx.exec(url);
+  return domain ? domain[1] : null;
 }
 
 function findImageUrl(text) {
