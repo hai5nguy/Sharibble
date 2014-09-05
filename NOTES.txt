@@ -12,3 +12,5 @@
 * embed and auto play youtube/vimeo
 * detect imgur links that don't end in filetype and pull the image from the page
 * unique url chatrooms
+
+http://jsfiddle.net/en5ssrp3/

@@ -1,4 +1,4 @@
-var IMAGE_URL_REGEX = /https?:\/\/\S+\.(jpe?g|gif|png)/i;
+var IMAGE_URL_REGEX = /https?:\/\/\S+\.(jpe?g|gif|png)/ig;
 var DEFAULT_IMAGE_URL = "/img/default.png";
 
 Session.set("userGuid", Meteor.uuid()) 
@@ -63,6 +63,7 @@ Chats.find().observe({
 // Helper Functions - must be first for some reason ///////////////////////////////////////////////
 
 UI.registerHelper("formatTimestamp", function(isoDateTime) {
+  return isoDateTime;
   var d = new Date(isoDateTime);
   var hh = d.getHours();
   var m = d.getMinutes();
@@ -82,8 +83,9 @@ UI.registerHelper("formatTimestamp", function(isoDateTime) {
 
 UI.registerHelper("embedUrl", function(text) {
   var matches = text.match(IMAGE_URL_REGEX);
-  if (!matches) return text;
-  text = surroundWithAnchor(text, matches[0]);
+  for (var m in matches) {
+    text = surroundWithAnchor(text, matches[m]);
+  }
   return text;
 });
 
@@ -174,7 +176,11 @@ function processNewChatMessage(message) {
 }
 
 function surroundWithAnchor(text, url) {
+  //var domain = extractDomain(url);
   return text.replace(url, "<a href='" + url + "' target='_blank'>image</a>");
+}
+function extractDomain(url) {
+
 }
 
 function findImageUrl(text) {
