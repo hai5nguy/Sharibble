@@ -17,7 +17,10 @@ $(function() {
     $(document).unbind('mousemove');
     //chatBottom(); //fix laters
   });
+
+
+  $("#aboutLink").click( function(){ $("#aboutModal").fadeToggle() } );
+  $(".modalClose").click( function(){ $("#aboutModal").fadeToggle() } );
+  
 });
 
-$("#aboutLink").click( function(){ $("#aboutModal").fadeToggle() } );
-$(".modalClose").click( function(){ $("#aboutModal").fadeToggle() } );

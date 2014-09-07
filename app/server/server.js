@@ -1,3 +1,4 @@
+var KEEPALIVE_TIMEOUT_SECONDS = 15;
 // Collections //////////////////////////////////////////////////////////////////////////////////////////
 AppSettings = new Meteor.Collection("appsettings");
 Chats = new Meteor.Collection("chats");
@@ -126,8 +127,8 @@ Meteor.startup(function() {
 	}, 60000);
 
 	Meteor.setInterval(function() {
-		var sixtySecondsAgo = new Date().addSeconds(-60);
-		UserStatus.remove( { keepAliveDateTime: { $lt: sixtySecondsAgo } });
+		var minKeepAliveDateTime = new Date().addSeconds(-1 * KEEPALIVE_TIMEOUT_SECONDS);
+		UserStatus.remove( { keepAliveDateTime: { $lt: minKeepAliveDateTime } });
 		AppSettings.upsert( { name: 'usersCurrentlyOnline' }, { $set: { value: UserStatus.find().count() }});
 	}, 15000);
 

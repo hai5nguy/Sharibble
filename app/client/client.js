@@ -1,5 +1,6 @@
 var IMAGE_URL_REGEX = /https?:\/\/\S+\.(jpe?g|gif|png)/ig;
 var DEFAULT_IMAGE_URL = "/img/default.png";
+var KEEPALIVE_INTERVAL_MILLISECONDS = 7000;
 
 Session.set("userGuid", Meteor.uuid()) 
 
@@ -8,7 +9,7 @@ Meteor.startup(function() {
   Meteor.call("keepAlive", Session.get("userGuid"));
   Meteor.setInterval(function() {
     Meteor.call("keepAlive", Session.get("userGuid"));
-  }, 15000);
+  }, KEEPALIVE_INTERVAL_MILLISECONDS);
 });
 
 // Collections ///////////////////////////////////////////////////////////////////////////////////
@@ -63,7 +64,7 @@ Chats.find().observe({
 // Helper Functions - must be first for some reason ///////////////////////////////////////////////
 
 UI.registerHelper("formatTimestamp", function(isoDateTime) {
-  return isoDateTime;
+  //return isoDateTime;
   var d = new Date(isoDateTime);
   var hh = d.getHours();
   var m = d.getMinutes();
@@ -181,7 +182,7 @@ function surroundWithAnchor(text, url) {
   return text.replace(url, '<a href="' + url + '" target="_blank">' + domain + 'Image</a>');
 }
 function extractDomain(url) {
-  var domainNameRegEx = /(?:https?:\/\/\S+\.)(\S+)(?:\.(?:com?|org|net|mil|edu|ca|li))/ig;
+  var domainNameRegEx = /(?:https?:\/\/\S+\.)(\S+)(?:\.(?:com?|org|net|mil|edu|ca|li|us))/ig;
   var domain = domainNameRegEx.exec(url);
   return domain ? domain[1] : null;
 }
