@@ -5,6 +5,7 @@
 * re-do markup to use JS for image resize and chatlog width/drag
 * Make an info bar and about page to explain privacy
 * Change image urls to be <a href="http://33.media.tumblr.com/1eb50966067d35cfffa61aa6a162e1e8/tumblr_navr8bZnjK1tixdy7o1_1280.jpg">Tumblr Image</a> or <a href="http://i.imgur.com/GtxhJh0.gif">Imgur Image</a> or <a href="https://anydomain.com/file.jpg">Anydomain Image</a>. And eventually we'll want to detect specifically youtube and vimeo links and say YouTube Video or Vimeo Video.
+* detect .us for Domain Image
 
 #WANT TO DO
 
@@ -14,3 +15,16 @@
 * unique url chatrooms
 
 http://jsfiddle.net/en5ssrp3/
+
+windowWidth = (current width)
+windowHeight = (current height)
+
+viewport = windowWidth - chatlog - dragbar | windowHeight
+dragbar = 7px | windowHeight
+infobar = chatlog | 24px
+chatlog = 300px, changes when dragbar is moved | windowHeight - inforbar - message
+message = chatlog - submitbutton | submitbutton
+submitbutton = 75px | 44px
+
+On release of dragbar, show chat bottom
+

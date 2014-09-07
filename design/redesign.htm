@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+
+    <!-- Meyer/Normalize -->
+    <style><!--
+      html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}blockquote, q{quotes:none;}blockquote:before, blockquote:after, q:before, q:after{content:""; content:none;}table{border-collapse:collapse; border-spacing:0;}html{font-family:sans-serif; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}body{margin:0;}article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary{display:block;}audio, canvas, progress, video{display:inline-block; vertical-align:baseline;}audio:not([controls]){display:none; height:0;}[hidden], template{display:none;}a{background:transparent;}a:active, a:hover{outline:0;}abbr[title]{border-bottom:1px dotted;}b, strong{font-weight:bold;}dfn{font-style:italic;}h1{font-size:2em; margin:0.67em 0;}mark{background:yellow; color:black;}small{font-size:80%;}sub{font-size:75%; line-height:0; position:relative; vertical-align:baseline;}sup{font-size:75%; line-height:0; position:relative; vertical-align:baseline; top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:1em 40px;}hr{-moz-box-sizing:content-box; box-sizing:content-box; height:0;}pre{overflow:auto;}code, kbd, pre, samp{font-family:monospace, monospace; font-size:1em;}button, input, optgroup, select, textarea{color:inherit; font:inherit; margin:0;}button{overflow:visible; text-transform:none;}select{text-transform:none;}button, html input[type="button"]{-webkit-appearance:button; cursor:pointer;}input[type="reset"], input[type="submit"]{-webkit-appearance:button; cursor:pointer;}button[disabled], html input[disabled]{cursor:default;}button::-moz-focus-inner{border:0; padding:0;}input{line-height:normal;}input::-moz-focus-inner{border:0; padding:0;}input[type="checkbox"], input[type="radio"]{box-sizing:border-box; padding:0;}input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{height:auto;}input[type="search"]{-webkit-appearance:textfield; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}fieldset{border:1px solid silver; margin:0 2px; padding:0.35em 0.625em 0.75em;}legend{border:0; padding:0;}textarea{overflow:auto;}optgroup{font-weight:bold;}table{border-collapse:collapse; border-spacing:0;}td, th{padding:0;}
+    --></style>
+
+    <style><!--
+      html,body {
+          background-color: #333;
+          font-size: 0px;
+          padding:0px;
+          margin: 0px;
+          border: 0px;
+          overflow: hidden;
+          color: #FFF;
+      }
+      #viewport, #dragbar, #infobar, #reroll, #currentlyOnline, #about, #chat, #chatlog, #message, #send {
+          display: inline-block;
+
+          padding: 0px;
+          margin: 0px;
+          vertical-align: top;
+          font-size: 14px;
+      }
+
+      #viewport {
+          overflow: auto;
+      }
+      #middleAlign {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+      }
+      #viewport img {}
+      #dragbar { background-color: #666; }
+      #infobar {}
+      #reroll {}
+      #currentlyOnline {}
+      #about {}
+      #chat {}
+      #chatlog { overflow: auto;}
+      #message { border: 0px; }
+      #sendButton {
+          border: 0px;
+          margin: 0px;
+          padding: 0px;
+          background-color: #444;
+          font-size: 14px;
+      }
+    --></style>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="viewport">
+      <div id="middleAlign"><img src="http://placekitten.com/300/400" alt="Sharibble" /></div>
+    </div>
+    <div id="dragbar"></div>
+    <div id="chat">
+      <div id="infobar">
+        <span id="reroll" class="icon 0"></span>
+        <span id="currentlyOnline">0 Users Online</span>
+        <span id="about">About/FAQ</span>
+      </div><br />
+      <div id="chatlog">
+          <p>lorem metus, mattis posuere purus laoreet vel. Nunc vel suscipit est, pretium dictum leo. Sed dolor urna, mattis vitae ligula et, dapibus eleifend felis. Ut consectetur, est eget consectetur</p>
+          <p>commodo,</p>
+          <p>justo risus posuere eros, vel egestas lorem tellus et risus.</p>
+          <p>Cras ut ullamcorper libero.</p>
+          <p>Mauris ut nisi vel odio efficitur malesuada et feugiat justo.</p>
+          <p>Duis tempor nunc sit amet pretium malesuada.</p>
+          <p>Vestibulum posuere ipsum sed sem ultrices porta.</p>
+          <p>Fusce nec est sed elit iaculis lobortis sit amet non leo.</p>
+          <p>Proin porta sapien ut posuere tempus.</p>
+          <p>Sed</p>
+          <p>ac posuere massa, ut auctor neque.</p>
+          <p>In ipsum nibh, euismod sit amet tellus quis, facilisis pulvinar turpis.</p>
+          <p>In hac habitasse platea dictumst. Donec magna</p>
+          <p>dui, egestas vel rutrum at, fringilla sit amet dui.</p>
+          <p>Quisque feugiat, turpis tristique bibendum lacinia, mauris urna commodo lorem, at congue risus sapien id mauris. Nullam condimentum ex sit amet ligula blandit, eu convallis tortor molestie. Phasellus in viverra elit. Maecenas pretium tortor augue, ut sagittis lorem auctor non. Quisque neque ligula, auctor non mi vitae, sollicitudin fringilla leo. Sed vitae ipsum nibh. Nullam blandit dapibus bibendum.</p>
+          <p>Praesent mattis, purus vitae posuere aliquet,</p>
+          <p>massa odio semper mauris, quis posuere massa elit et felis.</p>
+          <p>Nullam</p>
+          <p>id</p>
+          <p>nisi</p>
+          <p>a nunc vehicula vulputate et eget quam. Nam tempus ante lorem,</p>
+          <p>quis tempor elit luctus eget. Maecenas feugiat sapien molestie orci consectetur, quis commodo ex</p>
+          <p>porta. Pellentesque bibendum interdum eros. Sed</p>
+          <p>eget posuere eros.</p>
+          <p>Etiam consectetur porttitor vulputate.</p>
+          <p>Vestibulum vitae ullamcorper augue.</p>
+          <p>Curabitur auctor, sem efficitur molestie pretium, risus sapien sollicitudin dolor, eu eleifend metus leo id enim.</p>
+          <p>Aliquam scelerisque posuere diam, eget finibus</p>
+          <p>lorem commodo sed. Aenean pharetra tristique magna</p>
+          <p>ac blandit. In hac habitasse platea dictumst.</p>
+          <p>In vehicula blandit neque, quis condimentum enim elementum sed.</p>
+          <p>Aenean condimentum vestibulum</p>
+          <p>ante</p>
+          <p>nec vehicula. Praesent</p>
+          <p>faucibus, magna et finibus dapibus, ante</p>
+          <p>risus finibus lorem, vitae laoreet ipsum eros eu lacus. Curabitur ultricies dui dui,</p>
+          <p>quis hendrerit eros semper nec. Vestibulum sit amet porta nunc. Vivamus scelerisque imperdiet malesuada. Quisque et molestie risus.</p>
+          <p>Cras in laoreet dui, id posuere ex. Donec sagittis laoreet dolor ut vestibulum.</p>
+          <p>Sed leo libero, blandit vitae ligula a, condimentum sagittis nisl.</p>
+          <p>Proin ac libero quis sapien vestibulum bibendum vel at massa.</p>
+          <p>Praesent sit amet venenatis lorem.</p>
+          <p>Proin enim tortor, lobortis id elementum sed, sagittis id ante.</p>
+          <p>Vestibulum a ante sed justo mattis viverra. Sed vitae neque ultrices,</p>
+          <p><a target="_blank" href="http://i.imgur.com/h10VLU5.jpg">http://i.imgur.com/h10VLU5.jpg</a></p>
+          <p>dignissim nulla euismod, vestibulum ligula.</p>
+          <p>Etiam sit amet nisi</p>
+          <p>a metus rhoncus euismod sed</p>
+          <p>hendrerit nulla. Duis id</p>
+          <p>felis et quam venenatis rhoncus.</p>
+          <p><a target="_blank" href="http://i.imgur.com/NDfV6yt.jpg">http://i.imgur.com/NDfV6yt.jpg</a></p>
+      </div><br />
+      <textarea id="message"></textarea>
+      <input id="sendButton" type="submit" value="Send" />
+    </div>
+
+    <script type="text/javascript">
+
+      var pageSize = {
+        width: window.innerWidth || document.body.clientWidth,
+        height: window.innerHeight || document.body.clientHeight
+      }
+
+      var chatlogWidth = 300; //changes when dragbar is move
+      var dragbarWidth = 7;
+      var viewportWidth = pageSize.width - chatlogWidth - dragbarWidth;
+      var infobarWidth = chatlogWidth;
+      var sendButtonWidth = 75;
+      var messageWidth = chatlogWidth - sendButtonWidth;
+
+      var viewportHeight = pageSize.height;
+      var dragbarHeight = pageSize.height;
+      var infobarHeight = 24;
+      var sendButtonHeight = 44;
+      var messageHeight = sendButtonHeight;
+      var chatlogHeight = pageSize.height - infobarHeight - messageHeight;
+
+      //Dragbar resizes chat from http://jsfiddle.net/gaby/Bek9L
+      $("#dragbar").mousedown(function(resizeChat){
+        resizeChat.preventDefault();
+        $(document).mousemove(function(resizeChat){
+          chatlogWidth = (pageSize.width - resizeChat.pageX) + 2;
+          viewportWidth = pageSize.width - chatlogWidth - dragbarWidth;
+          infobarWidth = chatlogWidth;
+          messageWidth = chatlogWidth - sendButtonWidth;
+          setAllHeightWidth();
+        })
+      });
+      $(document).mouseup(function(resizeChat){
+        $(document).unbind('mousemove');
+        //chatBottom();
+      });
+
+
+      function setAllHeightWidth() {
+
+        $("#viewport").height(viewportHeight + "px").width(viewportWidth + "px");
+        $("#middleAlign").height(viewportHeight + "px").width(viewportWidth + "px");
+        $("#dragbar").height(dragbarHeight + "px").width(dragbarWidth + "px");
+        $("#infobar").height(infobarHeight + "px").width(infobarWidth + "px");
+        $("#chat").height(viewportHeight + "px").width(chatlogWidth + "px");
+        $("#chatlog").height(chatlogHeight + "px").width(chatlogWidth + "px");
+        $("#message").height(messageHeight + "px").width(messageWidth + "px");
+        $("#sendButton").height(sendButtonHeight + "px").width(sendButtonWidth + "px");
+
+        var featuredImage = $("#viewport img");
+
+        var featuredImageRatio = featuredImage.width() / featuredImage.height();
+        var viewportRatio = viewportWidth / viewportHeight;
+
+        //replace with comparing ratio of h/w of viewport and image
+        if ( (viewportRatio <= featuredImageRatio) == featuredScaled ) {
+          featuredImage.height("auto").width( viewportWidth + "px" );
+        } else {
+          featuredImage.height( viewportHeight + "px" ).width("auto");
+        }
+
+      }
+
+      var featuredScaled = true;
+
+      $( setAllHeightWidth );
+      $( window ).resize( setAllHeightWidth );
+
+      $("#viewport").click( function(){ featuredScaled = !featuredScaled; setAllHeightWidth() } );
+
+    </script>
+
+  </body>
+</html>
