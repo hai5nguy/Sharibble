@@ -18,3 +18,6 @@ $(function() {
     //chatBottom(); //fix laters
   });
 });
+
+$("#aboutLink").click( function(){ $("#aboutModal").fadeToggle() } );
+$(".modalClose").click( function(){ $("#aboutModal").fadeToggle() } );

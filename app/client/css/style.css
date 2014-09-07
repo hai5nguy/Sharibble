@@ -107,11 +107,12 @@ form { border: 0px; margin: 0px; padding: 0px; width: 100%; height: 100%; }
 
 #currentlyOnline { font-weight: bold; }
 
-#aboutLink:hover { cursor: hand; }
+#aboutLink { cursor: hand; }
 
 #aboutModal { display: block; background-color: rgba(0, 0, 0, 0.9); position: absolute; top: 40px; right: 21px; width: 350px; height: 70%; padding: 15px; border-radius: 10px; text-align: right; }
-#aboutModal .modalClose { font-weight: bold; }
+#aboutModal .modalClose { font-weight: bold; cursor: hand; }
 #aboutModal .modalClose:hover { font-color: red; }
+#aboutModal a { color: white; }
 
 #aboutModalInner { display: block; overflow: auto; height: 95%; text-align: left; }
 #aboutModalInner h1 { text-align: center; }
