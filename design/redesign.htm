@@ -17,16 +17,15 @@
           border: 0px;
           overflow: hidden;
           color: #FFF;
+          font-size: 0px;
       }
       #viewport, #dragbar, #infobar, #reroll, #currentlyOnline, #about, #chat, #chatlog, #message, #send {
           display: inline-block;
-
           padding: 0px;
           margin: 0px;
           vertical-align: top;
           font-size: 14px;
       }
-
       #viewport {
           overflow: auto;
       }
@@ -41,7 +40,7 @@
       #reroll {}
       #currentlyOnline {}
       #about {}
-      #chat {}
+      #chat { font-size: 0px; }
       #chatlog { overflow: auto;}
       #message { border: 0px; }
       #sendButton {
@@ -57,7 +56,7 @@
   </head>
   <body>
     <div id="viewport">
-      <div id="middleAlign"><img src="http://placekitten.com/300/400" alt="Sharibble" /></div>
+      <div id="middleAlign"><img src="http://placehold.it/600x300" alt="Sharibble" /></div>
     </div>
     <div id="dragbar"></div>
     <div id="chat">
@@ -176,9 +175,9 @@
         var featuredImageRatio = featuredImage.width() / featuredImage.height();
         var viewportRatio = viewportWidth / viewportHeight;
 
-        //replace with comparing ratio of h/w of viewport and image
+        //Compare the W/H ratio of image to viewport for scaling
         if ( (viewportRatio <= featuredImageRatio) == featuredScaled ) {
-          featuredImage.height("auto").width( viewportWidth + "px" );
+          featuredImage.height("auto").width( "100%" );
         } else {
           featuredImage.height( viewportHeight + "px" ).width("auto");
         }
