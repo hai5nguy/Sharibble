@@ -1,3 +1,4 @@
+/*
 $.get("https://api.imgur.com/3/album/zUv9K/images", function (imgurAlbumData) {
     $.each( imgurAlbumData.data, function( i, val ) {
       $("#owl-demo").append(
@@ -17,3 +18,4 @@ $.get("https://api.imgur.com/3/album/zUv9K/images", function (imgurAlbumData) {
       });
     });
 });
+*/
